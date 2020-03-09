@@ -21,6 +21,8 @@ class CreateHotelsTable extends Migration
             $table->integer('bathrooms')->nullable();
             $table->integer('storeys')->nullable();
             $table->integer('garages')->nullable();
+            
+            $table->index(['name', 'price','bedrooms','bathrooms','storeys','garages']);
             $table->timestamps();
         });
     }

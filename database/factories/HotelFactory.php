@@ -23,9 +23,9 @@ $factory->define(Hotel::class, function (Faker $faker) {
     return [
         'name' => $faker->company,
         'price' => $faker->price(100, 20000, true, true),
-        'bedrooms' => $faker->randomNumber(),
-        'bathrooms' => $faker->randomNumber(),
-        'storeys' => $faker->randomNumber(),
-        'garages' => $faker->randomNumber(),
+        'bedrooms' => $faker->numberBetween(1,10),
+        'bathrooms' => $faker->numberBetween(1,10),
+        'storeys' => $faker->numberBetween(1,10),
+        'garages' => $faker->numberBetween(1,10),
     ];
 });
